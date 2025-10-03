@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        botMessage: {
+          DEFAULT: "hsl(var(--bot-message))",
+          foreground: "hsl(var(--bot-message-foreground))",
+        },
+        userMessage: {
+          DEFAULT: "hsl(var(--user-message))",
+          foreground: "hsl(var(--user-message-foreground))",
+        },
+        chatHeader: "hsl(var(--chat-header))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
