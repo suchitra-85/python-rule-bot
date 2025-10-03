@@ -29,12 +29,6 @@ A modern, interactive chatbot built with React and TypeScript that demonstrates 
 ### Installation
 
 ```sh
-# Clone the repository
-git clone <YOUR_GIT_URL>
-
-# Navigate to the project directory
-cd <YOUR_PROJECT_NAME>
-
 # Install dependencies
 npm install
 
