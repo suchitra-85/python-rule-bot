@@ -1,73 +1,113 @@
-# Welcome to your Lovable project
+# Rule-Based Chatbot
 
-## Project info
+A modern, interactive chatbot built with React and TypeScript that demonstrates if-else logic and pattern matching for natural language processing.
 
-**URL**: https://lovable.dev/projects/54cd4a34-d90b-4d6d-b62c-3cc56d2f36aa
+## Features
 
-## How can I edit this code?
+- Interactive chat interface with real-time messaging
+- Rule-based response system using if-else conditionals
+- Pattern matching for various user inputs
+- Typing indicator animation
+- Time and date information
+- Simple calculation capabilities
+- Responsive design with smooth animations
 
-There are several ways of editing your application.
+## Technologies Used
 
-**Use Lovable**
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn-ui components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/54cd4a34-d90b-4d6d-b62c-3cc56d2f36aa) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/
+│   ├── ChatMessage.tsx      # Message display component
+│   ├── TypingIndicator.tsx  # Typing animation component
+│   └── ui/                  # UI components library
+├── utils/
+│   └── chatbotLogic.ts      # If-else logic for responses
+├── pages/
+│   └── Index.tsx            # Main chat interface
+└── index.css                # Design system and styles
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## How It Works
 
-## What technologies are used for this project?
+The chatbot uses a rule-based approach with if-else statements to process user input:
 
-This project is built with:
+1. User input is converted to lowercase and trimmed
+2. Pattern matching checks for keywords and phrases
+3. If-else conditionals determine the appropriate response
+4. Response is displayed with typing animation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Supported Commands
 
-## How can I deploy this project?
+- Greetings (hello, hi, good morning, etc.)
+- Time and date inquiries
+- Simple calculations
+- Weather questions
+- Help commands
+- General conversation
 
-Simply open [Lovable](https://lovable.dev/projects/54cd4a34-d90b-4d6d-b62c-3cc56d2f36aa) and click on Share -> Publish.
+## Customization
 
-## Can I connect a custom domain to my Lovable project?
+### Adding New Responses
 
-Yes, you can!
+Edit `src/utils/chatbotLogic.ts` to add new if-else conditions:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```typescript
+else if (input.includes("your keyword")) {
+  return "Your custom response";
+}
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Styling
+
+The design system is defined in:
+- `src/index.css` - Color tokens and animations
+- `tailwind.config.ts` - Theme configuration
+
+## Development
+
+```sh
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## License
+
+This project is open source and available for educational purposes.
